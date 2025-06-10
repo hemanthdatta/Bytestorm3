@@ -1,0 +1,12 @@
+# Include all the existing requirements
+-r requirements.txt
+
+# Azure-specific dependencies
+azure-storage-blob>=12.0.0
+azure-identity>=1.10.0
+gunicorn>=20.1.0
+uvicorn>=0.17.0
+python-dotenv>=0.20.0
+pyodbc>=4.0.34  # For SQL Server connections
+psycopg2-binary>=2.9.3  # For PostgreSQL connections
+pymysql>=1.0.2  # For MySQL connections 

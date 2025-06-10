@@ -1,0 +1,15 @@
+# Flask configuration for Azure
+SECRET_KEY=your_secret_key_here
+VOYAGE_API_KEY=pa-XQAgthfL8fQaoJWkagJgqOj6BTRbRlTKW-z-W_FLaDq
+FLASK_ENV=production
+
+# Database configuration
+# For production, consider using Azure SQL Database or Cosmos DB
+DATABASE_URL=r'database/appain.db'
+
+# Application settings
+DEBUG=False
+WEBSITES_PORT=8000
+
+# Azure specific settings
+WEBSITE_HOSTNAME=your-app-name.azurewebsites.net 

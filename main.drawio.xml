@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.4">
+  <diagram name="Checkout Pipeline with Page Change" id="Mm7XuR2Xgt4WU4_S5g7i">
+    <mxGraphModel dx="1603" dy="883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ekrye_K6S50neyLFfWLf-137" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-138" value="Inputs: modification_text, reset, image_path" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="120" y="35" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-139" value="Logger Setup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-140" value="Thread: fast_special_filter.parse_split_query" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="290" y="100" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-141" value="IF reset" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffd9b3;" vertex="1" parent="1">
+          <mxGeometry x="410" y="40" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-142" value="image_extractions.intention()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="490" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-143" value="IF intent == 1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffd9b3;" vertex="1" parent="1">
+          <mxGeometry x="670" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-144" value="image_path = None current_text = intent[query]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3e0ff;" vertex="1" parent="1">
+          <mxGeometry x="770" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-145" value="IF image_path exists" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffd9b3;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-146" value="image_extractions.discription()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="560" y="160" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-147" value="Thread: history_pref.generate_user_pref_query" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="220" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-148" value="query_manipulations.split_query + conflict_check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3e0ff;" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-149" value="IF &#39;special&#39; in query_dict: special_case_handler.special_case_split()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-150" value="Thread: extract_tags.get_tags() + meta[&#39;tags&#39;] update" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="340" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-174" value="image_extractions.text_split()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-176" value="IF &#39;general&#39; in query_dict: update current_text" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="300" y="340" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-177" value="IF conflict or reset: retrival.retrieve_and_rerank()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="500" y="340" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-178" value="voyage_rerank.rerank_products()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-180" value="IF special: special_case_handler.special_case_filter()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;" vertex="1" parent="1">
+          <mxGeometry x="220" y="400" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-181" value="Thread: fast_special_filter.rerank_with_spec_filter()" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="450" y="400" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-182" value="Return final_out, meta" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccffcc;strokeColor=#00b050;" vertex="1" parent="1">
+          <mxGeometry x="690" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-188" value="Thread: image_extractions.modify_query" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="760" y="160" width="170" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Edge connections -->
+        <mxCell id="Ekrye_K6S50neyLFfWLf-151" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-137" target="Ekrye_K6S50neyLFfWLf-138">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-152" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-138" target="Ekrye_K6S50neyLFfWLf-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-153" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-139" target="Ekrye_K6S50neyLFfWLf-140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-154" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-139" target="Ekrye_K6S50neyLFfWLf-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-155" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-141" target="Ekrye_K6S50neyLFfWLf-142">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-156" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-142" target="Ekrye_K6S50neyLFfWLf-143">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-157" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-143" target="Ekrye_K6S50neyLFfWLf-144">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-159" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-143" target="Ekrye_K6S50neyLFfWLf-145">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="120" />
+              <mxPoint x="490" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-160" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-141" target="Ekrye_K6S50neyLFfWLf-145">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="445" y="120" />
+              <mxPoint x="490" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-161" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-145" target="Ekrye_K6S50neyLFfWLf-146">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-164" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-145" target="Ekrye_K6S50neyLFfWLf-174">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-162" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-146" target="Ekrye_K6S50neyLFfWLf-147">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="200" />
+              <mxPoint x="550" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-163" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-146" target="Ekrye_K6S50neyLFfWLf-188">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-165" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-174" target="Ekrye_K6S50neyLFfWLf-147">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="200" />
+              <mxPoint x="550" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-166" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-147" target="Ekrye_K6S50neyLFfWLf-148">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-167" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-188" target="Ekrye_K6S50neyLFfWLf-148">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="845" y="260" />
+              <mxPoint x="550" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-168" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-174" target="Ekrye_K6S50neyLFfWLf-148">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="260" />
+              <mxPoint x="440" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-158" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-144" target="Ekrye_K6S50neyLFfWLf-147">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="200" />
+              <mxPoint x="550" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-169" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-148" target="Ekrye_K6S50neyLFfWLf-149">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="320" />
+              <mxPoint x="160" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-170" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-148" target="Ekrye_K6S50neyLFfWLf-176">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="320" />
+              <mxPoint x="395" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-183" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-176" target="Ekrye_K6S50neyLFfWLf-177">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-184" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-177" target="Ekrye_K6S50neyLFfWLf-178">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="380" />
+              <mxPoint x="120" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-185" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-178" target="Ekrye_K6S50neyLFfWLf-180">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-186" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-180" target="Ekrye_K6S50neyLFfWLf-181">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-187" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-181" target="Ekrye_K6S50neyLFfWLf-182">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-171" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-149" target="Ekrye_K6S50neyLFfWLf-180">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="380" />
+              <mxPoint x="325" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-172" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-140" target="Ekrye_K6S50neyLFfWLf-181">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="120" />
+              <mxPoint x="960" y="380" />
+              <mxPoint x="560" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-179" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-180" target="Ekrye_K6S50neyLFfWLf-150">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="370" />
+              <mxPoint x="815" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ekrye_K6S50neyLFfWLf-173" edge="1" parent="1" source="Ekrye_K6S50neyLFfWLf-150" target="Ekrye_K6S50neyLFfWLf-182">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="815" y="380" />
+              <mxPoint x="750" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
